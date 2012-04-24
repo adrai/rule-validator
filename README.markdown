@@ -5,6 +5,9 @@
 Rule-validator is a javascript module based on amanda. And works for node.js and in the browser.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, commands and events, etc.
 
+# Dependencies
+You need [underscore](http://documentcloud.github.com/underscore/) and [amanda](https://github.com/Baggz/Amanda/).
+
 # Download
 Releases for a browser are available for download from GitHub.
 
