@@ -5,11 +5,25 @@
 Rule-validator is a javascript module based on amanda. And works for node.js and in the browser.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, commands and events, etc.
 
-# Installation
+# Download
+Releases for a browser are available for download from GitHub.
+
+| **Version** | **Description** | **Size** | **Action** |
+|:------------|:----------------|:---------|:-----------|
+| `amanda.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.1.js) |
+| `amanda.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.1.min.js) |
+
+# Installation (node.js)
 
     $ npm install rule-validator
 
 # Usage
+
+    <!-- in Browser -->
+    <script src="rule-validator.js"></script>
+
+    // in node.js
+    var base = require('rule-validator');
 
 	var personValRules = base.extend({
 
