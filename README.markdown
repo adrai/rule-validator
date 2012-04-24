@@ -8,8 +8,8 @@ It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, comm
 # Download
 Releases for a browser are available for download from GitHub.
 
-| **Version** | **Description** | **Size** | **Action** |
-|:------------|:----------------|:---------|:-----------|
+| **Version** | **Description** | **Size** |
+|:------------|:----------------|:---------|
 | `amanda.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.1.js) |
 | `amanda.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.1.min.js) |
 
