@@ -73,7 +73,7 @@
         for (var r in rules) {
             var rule = rules[r];
             if (__.isFunction(rule)) {
-                rule = rule.call(extObj);
+                rule = rule.call(extObj, extObj.attributes);
             }
 
             extObj[r] = {

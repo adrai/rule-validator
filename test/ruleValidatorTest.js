@@ -11,10 +11,10 @@ describe('Rule-Validator', function() {
                 lastName: { type: 'string', minLength: 1 }
             },
 
-            renamePerson: function() {
+            renamePerson: function(attributes) {
                 return this.schema(
-                    this.attributes.firstName.isRequired(),
-                    this.attributes.lastName.isRequired()
+                    attributes.firstName.isRequired(),
+                    attributes.lastName.isRequired()
                 );
             }
 
