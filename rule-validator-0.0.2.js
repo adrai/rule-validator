@@ -4,11 +4,11 @@
       , __
       , ruleValidator = {};
 
-    if (typeof module !== 'undefined' && module.exports) {
+    if (typeof(module) !== 'undefined' && module.exports) {
         jsonValidator = require('amanda')('json');
         __ = require('underscore');
         module.exports = ruleValidator;
-    } else if (typeof define !== 'undefined') {
+    } else if (typeof(define) !== 'undefined') {
         define(['amanda', 'underscore'], function (amanda, underscore) {
             jsonValidator = amanda('json');
             __ = underscore;
