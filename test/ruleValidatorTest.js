@@ -16,6 +16,12 @@ describe('Rule-Validator', function() {
                     attributes.firstName.isRequired(),
                     attributes.lastName.isRequired()
                 );
+            },
+
+            renameFirstNameOfPerson: function(attributes) {
+                return this.schema(
+                    attributes.firstName
+                );
             }
 
         },
@@ -40,6 +46,16 @@ describe('Rule-Validator', function() {
                 });
             });
 
+            describe('having its value set required in an other rule', function() {
+
+                it('it should validate correctly', function() {
+                    personValRules.validate('renameFirstNameOfPerson', { lastName: 'Fritz' }, function(err) {
+                        expect(err).not.to.be.ok();
+                    });
+                });
+
+            });
+
         });
 
         describe('calling validate on the rule', function() {
@@ -48,6 +64,16 @@ describe('Rule-Validator', function() {
                 personValRules.createPerson.validate({ lastName: 'Fritz' }, function(err) {
                     expect(err).not.to.be.ok();
                 });
+            });
+
+            describe('having its value set required in an other rule', function() {
+
+                it('it should validate correctly', function() {
+                    personValRules.renameFirstNameOfPerson.validate({ lastName: 'Fritz' }, function(err) {
+                        expect(err).not.to.be.ok();
+                    });
+                });
+
             });
 
         });
