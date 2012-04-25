@@ -13,8 +13,8 @@ Releases for a browser are available for download from GitHub.
 
 | **Version** | **Description** | **Size** |
 |:------------|:----------------|:---------|
-| `rule-validator-0.0.2.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.2.js) |
-| `rule-validator-0.0.2.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.0.2.min.js) |
+| `rule-validator-0.1.0.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.0.js) |
+| `rule-validator-0.1.0.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.0.min.js) |
 
 # Installation (node.js)
 
@@ -34,10 +34,10 @@ Releases for a browser are available for download from GitHub.
             lastName: { type: 'string', minLength: 1 }
         },
 
-        renamePerson: function() {
+        renamePerson: function(attributes) {
             return this.schema(
-                this.attributes.firstName.isRequired(),
-                this.attributes.lastName.isRequired()
+                attributes.firstName.isRequired(),
+                attributes.lastName.isRequired()
             );
         }
 
