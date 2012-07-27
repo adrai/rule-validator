@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "rule-validator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "amanda": "https://github.com/adrai/Amanda/tarball/master",
-    "underscore": ">= 1.3.3"
+    "lodash": ">= 0.4.2"
   },
   "devDependencies": {
     "mocha": ">= 1.0.1",

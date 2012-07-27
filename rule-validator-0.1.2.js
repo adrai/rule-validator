@@ -6,7 +6,7 @@
 
     if (typeof(module) !== 'undefined' && module.exports) {
         jsonValidator = require('amanda')('json');
-        __ = require('underscore');
+        __ = require('lodash');
         module.exports = ruleValidator;
     } else if (typeof(define) !== 'undefined') {
         define(['amanda', 'underscore'], function (amanda, underscore) {
