@@ -13,8 +13,8 @@ Releases for a browser are available for download from GitHub.
 
 | **Version** | **Description** | **Size** |
 |:------------|:----------------|:---------|
-| `rule-validator-0.1.2.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.2.js) |
-| `rule-validator-0.1.2.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.2.min.js) |
+| `rule-validator-0.1.3.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.3.js) |
+| `rule-validator-0.1.3.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.3.min.js) |
 
 # Installation (node.js)
 
