@@ -2,19 +2,19 @@
 
 [![Build Status](https://secure.travis-ci.org/adrai/rule-validator.png)](http://travis-ci.org/adrai/rule-validator)
 
-Rule-validator is a javascript module based on amanda. And works for node.js and in the browser.
+Rule-validator is a javascript module based on tv4. And works for node.js and in the browser.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, commands and events, etc.
 
 # Dependencies
-You need [amanda](https://github.com/Baggz/Amanda/) and [lodash](http://lodash.com/) or [underscore](http://documentcloud.github.com/underscore/).
+You need [tv4](https://github.com/geraintluff/tv4) and [lodash](http://lodash.com/) or [underscore](http://documentcloud.github.com/underscore/).
 
 # Download
 Releases for a browser are available for download from GitHub.
 
 | **Version** | **Description** | **Size** |
 |:------------|:----------------|:---------|
-| `rule-validator-0.1.3.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.3.js) |
-| `rule-validator-0.1.3.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.1.3.min.js) |
+| `rule-validator-0.2.0.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.2.0.js) |
+| `rule-validator-0.2.0.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.2.0.min.js) |
 
 # Installation (node.js)
 
@@ -64,7 +64,7 @@ Releases for a browser are available for download from GitHub.
 
 # License
 
-Copyright (c) 2012 Adriano Raiano
+Copyright (c) 2013 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

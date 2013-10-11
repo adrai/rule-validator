@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "rule-validator",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -11,15 +11,16 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "amanda": "https://github.com/adrai/Amanda/tarball/master",
-    "lodash": ">= 0.5.x"
+    "lodash": ">= 2.2.1",
+    "tv4": ">= 1.0.10"
   },
   "devDependencies": {
     "mocha": ">= 1.0.1",
-    "expect.js": ">= 0.1.2"
+    "expect.js": ">= 0.1.2",
+    "smoosh": ">= 0.4.1"
   },
   "description": "Rule-validator is a javascript module based on amanda. And works for node.js and in the browser. It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, commands and events, etc.",
-  "keywords"    : [
+  "keywords": [
     "rule-validator",
     "rule",
     "json",
@@ -47,7 +48,7 @@
       "url": "https://raw.github.com/adrai/node-validator/master/licence"
     }
   ],
-  "scripts" : { 
-    "test" : "mocha"
-  } 
+  "scripts": {
+    "test": "mocha"
+  }
 }

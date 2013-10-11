@@ -1,4 +1,5 @@
-var smoosh = require('smoosh');
+var smoosh = require('smoosh'),
+    pkg = require('./package.json');
 
 // ## BUILD
 // run `jake build`   
@@ -8,7 +9,7 @@ task('build', [], function(debug) {
     
     // a basic smoosh configuration object
     smoosh.config({
-      "VERSION": "0.1.3",
+      "VERSION": pkg.version,
       "JAVASCRIPT": {
         "DIST_DIR": "./",
         "rule-validator": [
