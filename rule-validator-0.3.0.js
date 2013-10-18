@@ -23,23 +23,6 @@
   var ValidationRules = {};
   ValidationRules.prototype = {
 
-    // __schema:__ Use this function to wrap all passing attributes.
-    // 
-    // `this.schema(attributes.first, attributes.second)`
-    schema: function() {
-      var attributes = {};
-      __.each(arguments, function(arg) {
-        for(var member in arg) {
-          if (arg.hasOwnProperty(member)) {
-            attributes[member] = arg[member];
-            break;
-          }
-        }
-      });
-
-      return attributes;
-    },
-
     // __validate:__ Use this function validate some data against a rule.
     // 
     // `rules.validate(ruleName, data, callback)`
@@ -71,42 +54,17 @@
   ruleValidator.extend = function(rules, extension) {
     var extObj = __.extend(__.clone(ValidationRules.prototype), extension);
 
-    function isRequired(value) {
-      for(var member in this) {
-        if (this.hasOwnProperty(member)) {
-          // the cloning is necessary to not change attributes for other rules...
-          var copy = __.clone(this);
-          copy[member] = __.clone(this[member]);
-          copy[member].required = value === undefined || value === null ? true : value;
-          return copy;
-        }
-      }
-    }
-
-    function isNotRequired() {
-      return isRequired.call(this, false);
-    }
-
-    if (extObj.attributes) {
-      for (var m in extObj.attributes) {
-        var attr = {};
-        attr[m] = extObj.attributes[m];
-        attr.isRequired = isRequired;
-        attr.isNotRequired = isNotRequired;
-        extObj.attributes[m] = attr;
-      }
-    }
-
     for (var r in rules) {
       var rule = rules[r];
-      if (__.isFunction(rule)) {
-        rule = rule.call(extObj, extObj.attributes);
-      }
 
-      extObj[r] = {
-        type: 'object',
-        properties: rule
-      };
+      if (rule.type === 'object' && rule.properties) {
+        extObj[r] = rule;
+      } else {
+        extObj[r] = {
+          type: 'object',
+          properties: rule
+        };
+      }
 
       extObj[r].ruleName = r;
       extObj[r].validate = function(data, callback) {

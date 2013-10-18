@@ -13,8 +13,8 @@ Releases for a browser are available for download from GitHub.
 
 | **Version** | **Description** | **Size** |
 |:------------|:----------------|:---------|
-| `rule-validator-0.2.0.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.2.0.js) |
-| `rule-validator-0.2.0.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.2.0.min.js) |
+| `rule-validator-0.3.0.js` | *uncompressed, with comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.3.0.js) |
+| `rule-validator-0.3.0.min.js` | *compressed, without comments* | [Download](https://raw.github.com/adrai/rule-validator/master/rule-validator-0.3.0.min.js) |
 
 # Installation (node.js)
 
@@ -31,24 +31,21 @@ Releases for a browser are available for download from GitHub.
 	var personValRules = base.extend({
 
         createPerson: {
-            lastName: { type: 'string', minLength: 1 }
-        },
-
-        renamePerson: function(attributes) {
-            return this.schema(
-                attributes.firstName.isRequired(),
-                attributes.lastName.isRequired()
-            );
-        }
-
-    },
-    {
-        // optional attributes that can be used in rules...
-        attributes: {
             firstName: { type: 'string', minLength: 1 },
             lastName: { type: 'string', minLength: 1 }
         },
 
+        changePerson: {
+            type: 'object',
+            properties: {
+              firstName: { type: 'string', minLength: 1 },
+              lastName: { type: 'string', minLength: 1 }
+            },
+            required: ['lastName']
+        }
+
+    },
+    {
         // own stuff...
         aggregate: 'personAggregate'
     });
@@ -61,6 +58,10 @@ Releases for a browser are available for download from GitHub.
     personValRules.createPerson.validate({ lastName: 'Fritz' }, function(err) {
     });
 
+# IMPORTANT
+
+BE SURE TO DEFINE JSON SCHEMAS!
+Hint: [http://jsonary.com/documentation/json-schema/](http://jsonary.com/documentation/json-schema/)
 
 # License
 
