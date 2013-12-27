@@ -2,6 +2,8 @@
 
 [![Build Status](https://secure.travis-ci.org/adrai/rule-validator.png)](http://travis-ci.org/adrai/rule-validator)
 
+[![browser support](https://ci.testling.com/adrai/rule-validator.png)](https://ci.testling.com/adrai/rule-validator)
+
 Rule-validator is a javascript module based on tv4. And works for node.js and in the browser.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, domain, commands and events, etc.
 
