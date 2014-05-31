@@ -34,18 +34,18 @@
     "event",
     "domain"
   ],
-  "homepage": "https://github.com/adrai/node-validator",
+  "homepage": "https://github.com/adrai/rule-validator",
   "repository": {
     "type": "git",
-    "url": "git@github.com:adrai/node-validator.git"
+    "url": "git@github.com:adrai/rule-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/adrai/node-validator/issues"
+    "url": "https://github.com/adrai/rule-validator/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/adrai/node-validator/master/licence"
+      "url": "https://raw.github.com/adrai/rule-validator/master/licence"
     }
   ],
   "scripts": {
