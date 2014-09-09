@@ -1,3 +1,5 @@
+**This project is no longer maintained, look at directly [tv4](https://github.com/geraintluff/tv4)!**
+
 # Introduction
 
 [![Build Status](https://secure.travis-ci.org/adrai/rule-validator.png)](http://travis-ci.org/adrai/rule-validator)
